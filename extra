@@ -4,6 +4,14 @@ https://github.com/ > Signup (Access the code)
 https://github.com/Aakashdeveloper > Follow
 https://git-scm.com/downloads > Install (To interact with github website)
 
+///extensions
+> VsCode-icons
+> spell check
+> Tabnine
+> git lens
+> git history
+
+
 40-50h
 HTML
 CSS
@@ -52,3 +60,17 @@ base structure
 
 > Open Source
 > Base on Javascript
+
+
+HTML> is the main tag hyper text markup language
+Head> All the script,css,meta tags and title
+body> All the content that is visible to the user
+
+
+/////
+BlockLevel
+> Always start from new line
+> It will take whole width of the screen
+Inline
+> Start in the same line
+> Only take the space that is required for content
