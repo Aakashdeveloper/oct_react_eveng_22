@@ -74,3 +74,7 @@ BlockLevel
 Inline
 > Start in the same line
 > Only take the space that is required for content
+
+src> source
+alt > alternate
+href > hyper refernce
