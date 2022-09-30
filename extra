@@ -65,6 +65,7 @@ base structure
 HTML> is the main tag hyper text markup language
 Head> All the script,css,meta tags and title
 body> All the content that is visible to the user
+div > divsion tag
 
 
 /////
@@ -78,11 +79,25 @@ Inline
 src> source
 alt > alternate
 href > hyper refernce
+rel > related To/ releationship
+
+Name
+Your Image
+About Your
+Skills
+Hobbies
+Map
+Contact Us
+footer
+
+
 
 ReactJS @ 9:00 PM (IST) by Mr. Aakash
 Day-1 https://youtu.be/Fr1aVxmrsxE
 Day-2 https://youtu.be/N8ZCjNLt9og
 Day-3 https://youtu.be/6oulb_Dt1Jo
+Day-4 https://youtu.be/nsF3lja0Bmk
+
 Me to Everyone (9:47 PM)
 ReactJS @ 9:00 PM (IST) by Mr. Aakash from 26th Sep.
 Fee-8000/- (including GST) with videos
@@ -107,3 +122,5 @@ Please fill and send the details mentioned below
 
 Name ,Mobile  No, Email I'd ,Course ,Faculty  Name ,Batch timings
 Along with payment screenshot . and send to the support@nareshit.c
+
+
