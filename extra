@@ -90,6 +90,43 @@ Map
 Contact Us
 footer
 
+/////CSS//////
+inline
+styletag
+stylesheet
+
+inline>styletag>stylesheet
+
+inline
+{
+    color:red;
+    font-size:30px
+}
+
+styletag
+{
+    color:orange;
+    border:2px solid red;
+    background:gray
+}
+
+stylesheet
+{
+   background:white;
+   font-size:40px;
+   width:30px 
+}
+
+{
+    color:red;
+    font-size:30px;
+    border:2px solid red;
+    background:gray;
+    width:30px 
+}
+
+
+
 
 
 ReactJS @ 9:00 PM (IST) by Mr. Aakash
@@ -102,15 +139,7 @@ Me to Everyone (9:47 PM)
 ReactJS @ 9:00 PM (IST) by Mr. Aakash from 26th Sep.
 Fee-8000/- (including GST) with videos
   
-Bank Details
-Name: Naresh i Technologies
-A/C No. 50200022639833    
-Bank: HDFC
-A/C Type: Current Account
-IFSC Code: HDFC0001627
-MICR Code: 500240035
-Branch Code: 001627
-Branch:  Ameerpet
+
 Note: If you want to use Phonepe or Google Pay then follow  below steps.
 You can find the option Bank Transfer in Phonepe and Google pay. There you can enter our bank account number and you can transfer the amount. 
 
