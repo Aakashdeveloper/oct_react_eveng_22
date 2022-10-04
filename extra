@@ -126,6 +126,15 @@ stylesheet
 }
 
 
+///////Target Element//////////
+Id 
+> if we want to target something unique
+> #
+className 
+> When we want to target multiple elements with same property
+> .
+TagName
+
 
 
 
