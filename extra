@@ -135,6 +135,12 @@ className
 > .
 TagName
 
+solid
+dotted
+double
+dashed
+groove
+
 
 
 
