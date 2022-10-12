@@ -162,3 +162,49 @@ footer{
     height:50px;
     width:50px
 }
+
+@media screen and (max-width:1600px){
+    body{
+        background-color:skyblue
+    }  
+}
+
+@media screen and (max-width:1400px){
+    body{
+        background-color:rgb(212, 173, 241)
+    }  
+}
+
+
+@media screen and (max-width:1200px){
+    body{
+        background-color:rgb(209, 240, 175)
+    }  
+}
+
+@media screen and (max-width:1000px){
+    body{
+        background-color:rgb(237, 209, 172)
+    }  
+    .tileContainer{
+        width:45%;
+    }
+}
+
+@media screen and (max-width:800px){
+    body{
+        background-color:rgb(238, 239, 172)
+    } 
+    .tileContainer{
+        width:90%;
+    } 
+}
+
+@media screen and (max-width:600px){
+    body{
+        background-color:rgb(238, 174, 183)
+    }  
+    .tileContainer{
+        width:100%;
+    }
+}

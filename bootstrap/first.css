@@ -1,0 +1,13 @@
+.btn-indigo{
+    background-color: indigo !important;
+}
+
+.navimg{
+    height:350px;
+    width:100%
+}
+
+.navimg img{
+    height:100%;
+    width:100%;
+}
