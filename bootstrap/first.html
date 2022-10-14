@@ -26,6 +26,7 @@
             </div>
         </nav>
         <div class="container">
+            
             <div id="devSlider" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="item active navimg">
@@ -48,6 +49,20 @@
                     <span class="glyphicon glyphicon-chevron-right"></span> 
                 </a>
             </div>
+
+            <hr/>
+            <div class="row">
+                <div id="first" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="second" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="third" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="fourth" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="fifth" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="sixth" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="seventh" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="eight" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+            </div>
+            
+            <hr/>
            
 
 
@@ -56,50 +71,114 @@
                 <p>
                     London is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                 </p>
-                <button class="btn btn-primary">Click</button>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#devModal">Click</button>
                 <button class="btn btn-success">Click</button>
                 <button class="btn btn-danger">Click</button>
                 <button class="btn btn-warning">Click</button>
                 <button class="btn btn-info">Click</button>
                 <button class="btn btn-info btn-indigo">Click</button>
             </div>
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    Students
-                </div>
-                <div class="panel-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Roll No</th>
-                                <th>Name</th>
-                                <th>Class</th>
-                                <th>City</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                               <td>1</td>
-                               <td>Amit</td>
-                               <td>UI</td>
-                               <td>Delhi</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Nikita</td>
-                                <td>React</td>
-                                <td>Mumbai</td>
-                             </tr>
-                             <tr>
-                                <td>3</td>
-                                <td>Abdul</td>
-                                <td>Node</td>
-                                <td>Pune</td>
-                             </tr>
-                        </tbody>
-                    </table>
+
+            <div id="devModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+              
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Students
+                        </div>
+                        <div class="panel-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Roll No</th>
+                                        <th>Name</th>
+                                        <th>Class</th>
+                                        <th>City</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                       <td>1</td>
+                                       <td>Amit</td>
+                                       <td>UI</td>
+                                       <td>Delhi</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Nikita</td>
+                                        <td>React</td>
+                                        <td>Mumbai</td>
+                                     </tr>
+                                     <tr>
+                                        <td>3</td>
+                                        <td>Abdul</td>
+                                        <td>Node</td>
+                                        <td>Pune</td>
+                                     </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            Students
+                        </div>
+                        <div class="panel-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Roll No</th>
+                                        <th>Name</th>
+                                        <th>Class</th>
+                                        <th>City</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                       <td>1</td>
+                                       <td>Amit</td>
+                                       <td>UI</td>
+                                       <td>Delhi</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Nikita</td>
+                                        <td>React</td>
+                                        <td>Mumbai</td>
+                                     </tr>
+                                     <tr>
+                                        <td>3</td>
+                                        <td>Abdul</td>
+                                        <td>Node</td>
+                                        <td>Pune</td>
+                                     </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             
         </div>
     </body>
