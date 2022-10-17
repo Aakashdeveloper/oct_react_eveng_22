@@ -185,3 +185,50 @@ md > 768px
 lg > 992px
 xl > 1200px
 xxl > 1400px
+
+//////Npm//////
+> Node Package Manager
+
+
+/////JSON///////
+> Javascript Object Notation
+(Way to represent the data)
+[
+    {
+        "name":"Amit",
+        "city":"Delhi" 
+    },
+    {
+        "name":"Nikita",
+        "city":"Paris" 
+    }
+]
+
+///////////Package.json////////
+> Entry point to app
+> Meta data(name,version,description)
+> Packages
+> Command (start,build,test)
+
+///Step to generate Package.json
+**NodeJs Must be installed in laptop
+> open the cmd and navigate to the folder
+> npm init 
+> Answer all question
+> Type "yes"
+
+
+///Step to install the package
+**NodeJs Must be installed in laptop
+> open the cmd and navigate to the folder
+> npm i packagename
+
+///////////Setup React App//
+**NodeJs Must be installed in laptop
+> open the cmd and navigate to the folder
+> npx create-react-app appname
+
+///////////Setup to Run React App//
+> open the cmd and navigate to the folder
+> npm start
+                                                                              
