@@ -232,3 +232,18 @@ xxl > 1400px
 > open the cmd and navigate to the folder
 > npm start
                                                                               
+
+> react > this is the main libraray
+> react-dom > this will help to display content on the screen
+> react-script > this will help to run the app
+
+
+
+function add(a,b){
+    var out = [a,b]
+    return out
+}
+
+add(1,2)
+[1,2]
+
