@@ -247,3 +247,30 @@ function add(a,b){
 add(1,2)
 [1,2]
 
+
+///Component
+Functional
+> Dumb Component
+> Use for the Display purpose
+> We cannot maintain state
+
+Class component
+> Logical Component
+> Api Calling, Logics
+> We can maintain state
+
+
+hooks component
+
+
+/////JavaScript//////
+function add(a,b){
+    return a+b
+}
+add(1,2)
+3
+
+////////////////////////////////
+const add = (a,b) => {return a+b}
+add(1,2)
+3
