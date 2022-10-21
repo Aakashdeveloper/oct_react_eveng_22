@@ -274,3 +274,13 @@ add(1,2)
 const add = (a,b) => {return a+b}
 add(1,2)
 3
+
+////////
+State
+> Act like a local variable
+> Each component can have its own state
+> We can update the value of state
+
+Props
+> Use to transfer the data between 2 nested components
+> we cannot update the value of props
