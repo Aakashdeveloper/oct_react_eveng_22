@@ -254,6 +254,7 @@ Functional
 > Use for the Display purpose
 > We cannot maintain state
 
+
 Class component
 > Logical Component
 > Api Calling, Logics
@@ -280,7 +281,38 @@ State
 > Act like a local variable
 > Each component can have its own state
 > We can update the value of state
+> Any data interaction will happen through the state
 
 Props
 > Use to transfer the data between 2 nested components
 > we cannot update the value of props
+
+
+/////
+var a = [5,8,34,23,89,16,24,65,1,10]
+for(i=0;i<a.length;i++){
+    console.log(a[i])
+}
+
+var a = [5,8,34,23,89,16,24,65,1,10]
+a.map((data) => {return data*2})
+[10, 16, 68, 46, 178, 32, 48, 130, 2, 20]
+
+var a = [5,8,34,23,89,16,24,65,1,10]
+a.filter((data) => {return data>50})
+[89, 65]
+
+var city = ["Delhi","Mumbai","Pune","Amsterdam","Helsinki"]
+
+city.indexOf('Delhi')
+0
+city.indexOf('Amsterdam')
+3
+city.indexOf('Venice')
+-1
+city.indexOf('Nice')
+-1
+
+
+parent > child (props)
+child > parent (props with callback function) 
