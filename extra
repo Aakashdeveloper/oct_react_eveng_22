@@ -318,3 +318,34 @@ parent > child (props)
 child > parent (props with callback function) 
 
 npm i react-router-dom@5.3.0
+
+Params
+> what we pass after /
+> need to declare before use
+> mainly use to pass 1 or 2 values
+
+QueryParams
+> what we pass after ?
+> no need to declare before use
+> We can pass multiple values
+
+
+
+default props
+> History > use for redirection
+> Location > use for query params
+> Match > use for params
+
+
+var a = "?page=3"
+undefined
+a.split('=')
+(2) ['?page', '3']
+var a = "?page=3&code=10"
+undefined
+a.split('&')
+(2) ['?page=3', 'code=10']
+var out = a.split('&')
+undefined
+out[0].split('=')
+(2) ['?page', '3']

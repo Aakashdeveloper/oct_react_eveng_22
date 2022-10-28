@@ -14,11 +14,11 @@ const Post = () => {
                     Post is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                 </p>
                 <h2>JavaScript</h2>
-                <Link to="/" className="btn btn-danger">Details</Link>
+                <Link to="/post/Javascript?page=1" className="btn btn-danger">Details</Link>
                 <h2>React</h2>
-                <Link to="/" className="btn btn-success">Details</Link>
+                <Link to="/post/React?page=2" className="btn btn-success">Details</Link>
                 <h2>Node</h2>
-                <Link to="/" className="btn btn-warning">Details</Link>
+                <Link to="/post/Node?page=3" className="btn btn-warning">Details</Link>
             </div>
         </div>
 
