@@ -1,0 +1,24 @@
+body{
+    margin:auto;
+    background-color:rgb(241, 206, 234)
+}
+a{
+    text-decoration:none
+}
+header{
+    height:60px;
+    /* border:2px solid red; */
+    background-color:#3b2632;
+    color:white
+}
+
+#icon{
+    float:left;
+    margin-left:2%;
+}
+
+#loginset{
+    float:right;
+    margin-right:2%;
+    margin-top:2%;
+}

@@ -1,0 +1,25 @@
+footer{
+    /* height:80px; */
+    margin-top:3%;
+    background:#3b2632;
+    color:white;
+    text-align:center
+}
+
+#footText{
+    font-size: 30px;
+}
+.footDiv{
+    height:70px;
+    width:33%;
+    display: inline-block;
+    border-right: 2px solid #fff;
+}
+.noBorder{
+    border:none
+}
+
+.socialIcon{
+    height:50px;
+    width:50px
+}
