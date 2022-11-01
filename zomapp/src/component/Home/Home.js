@@ -1,8 +1,13 @@
 import React from 'react';
+import Search from './Search';
+import QuickSearch from './QuickSearch';
 
 const Home = () => {
     return(
-        <h2>Home page</h2>
+        <div>
+            <Search/>
+            <QuickSearch/>
+        </div>
     )
 }
 
