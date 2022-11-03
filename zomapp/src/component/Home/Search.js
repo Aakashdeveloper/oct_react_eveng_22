@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
 import './Search.css';
 
-const lurl = "https://zomatoajulypi.herokuapp.com/location"
+const lurl = "https://zomatoajulypi.herokuapp.com/location";
+const restUrl = "https://zomatoajulypi.herokuapp.com/restaurant?stateId="
 
 class Search extends Component {
 
@@ -9,7 +10,8 @@ class Search extends Component {
         super()
 
         this.state={
-            location:''
+            location:'',
+            restData:''
         }
        // console.log("inside constructor>>>")
     }
@@ -25,7 +27,25 @@ class Search extends Component {
                 )
             })
         }
-        
+    }
+
+    renderRest = (data) => {
+        if(data){
+            return data.map((item) => {
+                return(
+                    <option value={item.restaurant_id} key={item.restaurant_id}>
+                        {item.restaurant_name} | {item.address}
+                    </option>
+                )
+            })
+        }
+    }
+
+    handleCity=(event)=>{
+        let stateId = event.target.value
+        fetch(`${restUrl}${stateId}`,{method:'GET'})
+        .then((res) => res.json())
+        .then((data) => {this.setState({restData:data})})
     }
 
     render(){
@@ -39,14 +59,13 @@ class Search extends Component {
                     Find Best Place Near You
                 </div>
                 <div class="dropdown">
-                    <select>
+                    <select onChange={this.handleCity}>
                         <option>----SELECT YOUR CITY----</option>
                         {this.renderCity(this.state.location)}
                     </select>
                     <select id="restDrop">
                         <option>----SELECT YOUR RESTAURANTS----</option>
-                        <option>Wow Momos</option>
-                        <option>Dominos</option>
+                        {this.renderRest(this.state.restData)}
                     </select>
                 </div>
             </div>
