@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
-import axios from './axios';
+import axios from 'axios';
 import './listing.css';
+import ListingDisplay from './listingDisplay';
 
 const url = "https://zomatoajulypi.herokuapp.com/restaurant?mealtype_id="
 
@@ -20,6 +21,7 @@ class Listing extends Component {
                 <div className="row">
                     <div id="mainListing">
                         <div id="filter"></div>
+                        <ListingDisplay listData={this.state.restaurantList}/>
                     </div>
                 </div>
             </>
@@ -28,6 +30,8 @@ class Listing extends Component {
 
     componentDidMount(){
         let mealId = this.props.match.params.mealId;
+        axios.get(`${url}${mealId}`)
+        .then((res) => this.setState({restaurantList:res.data}))
     }
 }
 
