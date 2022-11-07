@@ -4,22 +4,18 @@
 }
 
 .tileImage{
-
     width:48%;
     float: left;
 }
 
-
-
 .tileContent{
-
     width:50%;
     margin-left: 2%;
     float: left;
 }
 
 .imageClass > img{
-    height: 500px;
+    height: 600px;
     width:95%;
     margin-left: 3%;
     margin-top: 3%;

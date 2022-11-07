@@ -1,15 +1,21 @@
 import React,{Component} from 'react';
 import axios from 'axios';
-import './details.css'
+import './details.css';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import { Link } from 'react-router-dom';
+import MenuDetails from './menuDetails';
 
-const url = " http://zomatoajulypi.herokuapp.com/details";
+const url = " http://zomatoajulypi.herokuapp.com";
 
 class Details extends Component {
     constructor(props){
         super(props)
 
         this.state={
-            details:''
+            details:'',
+            mealId:sessionStorage.getItem('mealId')?sessionStorage.getItem('mealId'):1,
+            menuList:''
         }
     }
 
@@ -40,15 +46,42 @@ class Details extends Component {
                             </div>
                     </div>
                 </div>
+                <Tabs>
+                    <TabList>
+                        <Tab>About</Tab>
+                        <Tab>Contact</Tab>
+                    </TabList>
+
+                    <TabPanel>
+                        <h2>{details.restaurant_name}</h2>
+                        <p>{details.restaurant_name}  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </TabPanel>
+                    <TabPanel>
+                        <h2>{details.address}</h2>
+                        <h3>Contact: {details.contact_number}</h3>
+                    </TabPanel>
+                </Tabs>
+                <Link to={`/listing/${this.state.mealId}`} className="btn btn-danger">
+                    Back
+                </Link>&nbsp;
+                <button className="btn btn-success">Proceed</button>
+                <div className="col-md-12">
+                    <center><h2>Menu</h2></center>
+                    <MenuDetails menudata={this.state.menuList}/>
+                </div>
             </div>
+            
+           
            </>
         )
     }
 
     async componentDidMount(){
         let restId = this.props.location.search.split('=')[1];
-        let response = await axios.get(`${url}/${restId}`)
-        this.setState({details:response.data[0]})
+        let response = await axios.get(`${url}/details/${restId}`)
+        let menuResponse = await axios.get(`${url}/menu/${restId}`)
+        this.setState({details:response.data[0],menuList:menuResponse.data})
     }
 }
 

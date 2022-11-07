@@ -20,6 +20,7 @@ Basic Javascript Required for React
 
 Npm
 React = 3
+
 Mock API
 json-server
 Deployment
@@ -51,6 +52,23 @@ GraphQL
 Login/Logout
 If else , loop , function, array, variable
 
+
+React-JWT(Login Logout)-1
+HOC
+Routing6
+Github
+Deployment
+-> MERN
+-> heroku
+-> Netlify
+-> ReactPy
+-> Aws
+-> Docker
+-> Nginx
+-> Jenkins
+React-GraphQL - 1 
+Basic React Native- 1
+Testing
 
 >>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<
 React
@@ -391,3 +409,37 @@ Page3 (Details)
        
 (get) restaurants>         https://zomatoajulypi.herokuapp.com/restaurants
 https://developerpayment.herokuapp.com/paynow
+
+
+8:00 am Nodejs
+HTTPS://zoom.us/j/82252979596
+
+
+
+var a = [56,34,12,34,5]
+undefined
+a.splice(2,1)
+[12]
+a
+(4) [56, 34, 34, 5]
+a.splice(1,1)
+[34]
+a
+(3) [56, 34, 5]
+a.splice(0,1)
+[56]
+
+var a = [56,34,12,34,5]
+undefined
+a.splice(a.indexOf(12),1)
+[12]
+a.splice(a.indexOf(34),1)
+[34]
+a
+(3) [56, 34, 5]
+a.splice(a.indexOf(34),1)
+[34]
+a
+(2) [56, 5]
+a.splice(a.indexOf(34),1)
+[5]
