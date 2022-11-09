@@ -20,9 +20,10 @@ Basic Javascript Required for React
 
 Npm
 React = 3
-
 Mock API
-json-server
+json-server >>> npx json-server --watch order.json --port 7600
+
+
 Deployment
 -> MERN
 -> heroku

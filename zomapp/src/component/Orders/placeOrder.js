@@ -1,6 +1,9 @@
 import React,{Component} from 'react';
+import './placeOrder.css';
+
 
 const url = "http://zomatoajulypi.herokuapp.com/menuItem";
+const placeOrder = "http://localhost:7600/orders"
 
 class PlaceOder extends Component {
 
@@ -16,6 +19,35 @@ class PlaceOder extends Component {
             phone:9876543212,
             address:'KY 34 sector 12',
             menuItem:''
+        }
+    }
+
+    placeOrder = () => {
+        let obj = this.state;
+        obj.menuItem = sessionStorage.getItem('menu');
+        console.log(obj)
+        fetch(placeOrder,{
+            method:'POST',
+            headers:{
+                'accept':'application/json',
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify(obj)
+        })
+        .then(this.props.history.push('/viewBooking'))
+    }
+
+    renderItem=(data) => {
+        if(data){
+            return data.map((item) => {
+                return(
+                    <div className="orderItem" key={item.menu_id}>
+                        <img src={item.menu_image} alt={item.menu_name}/>
+                        <h3>{item.menu_name}</h3>
+                        <h4>Rs. {item.menu_price}</h4>
+                    </div>
+                )
+            })
         }
     }
 
@@ -56,12 +88,13 @@ class PlaceOder extends Component {
                                 value={this.state.address} onChange={this.handleChange}/>
                             </div>
                         </div>
+                        {this.renderItem(this.state.menuItem)}
                         <div className="row">
                             <div className="col-md-12">
                                 <h2>Total Price is Rs.{this.state.cost}</h2>
                             </div>
                         </div>
-                        <button className="btn btn-success" onClick={this.handleCheckout}>
+                        <button className="btn btn-success" onClick={this.placeOrder}>
                             Checkout
                         </button>
                     </div>
