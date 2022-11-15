@@ -22,8 +22,10 @@ Npm
 React = 3
 Mock API
 json-server >>> npx json-server --watch order.json --port 7600
-
-
+/////////////////////////
+React-JWT(Login Logout)-2
+React_hooks -1
+HOC
 Deployment
 -> MERN
 -> heroku
@@ -33,14 +35,13 @@ Deployment
 -> Docker
 -> Nginx
 -> Jenkins
-React-JWT(Login Logout)-2
-React_hooks -1
-HOC
+
 React-GraphQL - 1 
 Basic React Native- 1
 React-Redux - 1
 React-Redux - 1
 React-PWA - 1
+
 ReactMaps
 Github
 Testing Jest Enzime
@@ -458,5 +459,5 @@ a.splice(a.indexOf(34),1)
 (response)=> {auth:true,token:'dgsdg'}
 
 /******UserInfo*****/
-(GET) => po
+(GET) => https://developerjwt.herokuapp.com/api/auth/userinfo
 (Header) => {'x-access-token':'token value from login'}

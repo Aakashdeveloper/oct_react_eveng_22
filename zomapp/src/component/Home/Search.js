@@ -78,7 +78,7 @@ class Search extends Component {
         )
     }
 
-    //api calling on page load 
+    // api calling on page load 
     componentDidMount(){
         console.log("inside componentDidMount>>>")
         fetch(lurl,{method: 'GET'})
