@@ -42,6 +42,9 @@ class Header extends Component {
         }else{
             return(
                 <>
+                    <a className="btn btn-danger" href="https://github.com/login/oauth/authorize?client_id=930f92e500db2f4d357c">
+                        Login With Github
+                    </a> &nbsp;
                     <Link className="btn btn-success" to="/login">
                         <span className="glyphicon glyphicon-log-in"></span> Login
                     </Link> &nbsp;

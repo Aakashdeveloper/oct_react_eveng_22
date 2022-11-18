@@ -8,9 +8,11 @@ class ViewOder extends Component {
 
     constructor(props){
         super(props)
+        let email = sessionStorage.getItem('userInfo')?sessionStorage.getItem('userInfo').split(',')[1]:[]
 
         this.state={
-            orders:''
+            orders:'',
+            email: email
         }
     }
 
@@ -34,7 +36,27 @@ class ViewOder extends Component {
     }
 
     componentDidMount(){
-        axios.get(placeOrder).then((res) => {this.setState({orders:res.data})})
+        if(this.props.location){
+            let query = this.props.location.search.split('&');
+            if(query){
+                let data = {
+                    "status":query[0].split('=')[1],
+                    "date":query[2].split('=')[1],
+                    "bank_name":query[3].split('=')[1]
+                }
+                let id = query[1].split('=')[1].split('_')[1]
+                console.log(id)
+                fetch(`${placeOrder}/${id}`,{
+                    method:'PATCH',
+                    headers:{
+                        'Accept':'application/json',
+                        'Content-Type':'application/json'
+                    },
+                    body:JSON.stringify(data)
+                })
+            }
+        }
+        axios.get(`${placeOrder}?email=${this.state.email}`).then((res) => {this.setState({orders:res.data})})
     }
 }
 
