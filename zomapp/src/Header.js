@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import './Header.css';
-import {Link} from 'react-router-dom'
+import {Link,withRouter} from 'react-router-dom'
 
 
 const url = "https://developerjwt.herokuapp.com/api/auth/userinfo"
@@ -10,7 +10,9 @@ class Header extends Component {
         super(props)
 
         this.state={
-            userData:''
+            userData:'',
+            username:'',
+            userImg:''
         }
     }
 
@@ -18,27 +20,43 @@ class Header extends Component {
         sessionStorage.removeItem('ltk');
         sessionStorage.removeItem('userInfo');
         sessionStorage.setItem('loginStatus','loggedOut')
-        this.setState({userData:''});
-        
+        sessionStorage.removeItem('uName');
+        sessionStorage.removeItem('uImg');
+        this.setState({userData:'',username:'',userImg:''});
         this.props.history.push('/')
     }
 
     conditionalRender = () => {
-        if(this.state.userData.name){
-            let data = this.state.userData;
-            let outputArray = [data.name,data.email,data.phone];
-            sessionStorage.setItem('userInfo',outputArray);
-            sessionStorage.setItem('loginStatus','loggedIn')
-            return(
+        if(this.state.userData.name || sessionStorage.getItem('uName') !== null){
+            if(sessionStorage.getItem('uName') !== null){
+                let name = sessionStorage.getItem('uName');
+                let image = sessionStorage.getItem('uImg');
+                return(
                     <>
-                        <Link className="btn btn-info" to="/">
-                            <span className="glyphicon glyphicon-user"></span> Hi {data.name}
+                        <Link className="btn btn-success" to="/login">
+                           Hi <img src={image} style={{height:50,width:50}}/> {name}
                         </Link> &nbsp;
                         <button className="btn btn-danger" onClick={this.handleLogout}>
                             <span className="glyphicon glyphicon-log-out"></span> Logout
                         </button>
                     </>
-            )
+                )
+            }else{
+                let data = this.state.userData;
+                let outputArray = [data.name,data.email,data.phone];
+                sessionStorage.setItem('userInfo',outputArray);
+                sessionStorage.setItem('loginStatus','loggedIn')
+                return(
+                        <>
+                            <Link className="btn btn-info" to="/">
+                                <span className="glyphicon glyphicon-user"></span> Hi {data.name}
+                            </Link> &nbsp;
+                            <button className="btn btn-danger" onClick={this.handleLogout}>
+                                <span className="glyphicon glyphicon-log-out"></span> Logout
+                            </button>
+                        </>
+                )
+            }
         }else{
             return(
                 <>
@@ -73,6 +91,34 @@ class Header extends Component {
 
     // api 
     componentDidMount(){
+        if(this.props.location.search){
+            if(this.props.location.search.split('=')[0] === '?code'){
+                var code = this.props.location.search.split('=')[1]
+            }
+            if(code){
+                let requetedData = {
+                    code:code
+                }
+                fetch(`http://localhost:9900/oauth`,{
+                    method: 'POST',
+                    headers:{
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requetedData)
+                })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data)
+                    let username = data.name;
+                    let img = data.avatar_url;
+                    sessionStorage.setItem('uName', username)
+                    sessionStorage.setItem('uImg', img);
+                    sessionStorage.setItem('loginStatus','loggedIn')
+                    this.setState({username: username,userImg:img})
+                })
+            }
+        }
         fetch(url,{
             method: 'GET',
             headers:{
@@ -89,4 +135,4 @@ class Header extends Component {
 
 }
 
-export default Header;
+export default withRouter(Header)

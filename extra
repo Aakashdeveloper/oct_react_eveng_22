@@ -23,14 +23,13 @@ React = 3
 Mock API
 json-server >>> npx json-server --watch order.json --port 7600
 React_hooks -1
-/////////////////////////
 React-JWT(Login Logout)-2
-
-HOC
 Deployment
+-> Netlify
+/////////////////////////
+HOC
 -> MERN
 -> heroku
--> Netlify
 -> ReactPy
 -> Aws
 -> Docker
