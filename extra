@@ -26,17 +26,17 @@ React_hooks -1
 React-JWT(Login Logout)-2
 Deployment
 -> Netlify
-/////////////////////////
-HOC
 -> MERN
--> heroku
+-> heroku(heroku.com)
 -> ReactPy
 -> Aws
--> Docker
 -> Nginx
 -> Jenkins
-
+-> Docker
+/////////////////////////
+HOC
 React-GraphQL - 1 
+
 Basic React Native- 1
 React-Redux - 1
 React-Redux - 1
