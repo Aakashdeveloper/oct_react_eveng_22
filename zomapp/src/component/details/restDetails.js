@@ -50,10 +50,10 @@ class Details extends Component {
                             <h3>Best Taste of Fresh Chai with Samosa At your Door or DineIn</h3>
                             <div>
                                 <div className="icons">
-                                    <img src="https://i.ibb.co/wJvrhYg/veg.png"/>
+                                    <img src="https://i.ibb.co/wJvrhYg/veg.png" alt=""/>
                                 </div>
                                 <div className="icons">
-                                    <img src="https://i.ibb.co/mD3jpgc/sentizied.png"/>
+                                    <img src="https://i.ibb.co/mD3jpgc/sentizied.png" alt=""/>
                                 </div>
                             </div>
                     </div>

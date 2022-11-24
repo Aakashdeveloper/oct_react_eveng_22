@@ -34,7 +34,7 @@ class Header extends Component {
                 return(
                     <>
                         <Link className="btn btn-success" to="/login">
-                           Hi <img src={image} style={{height:50,width:50}}/> {name}
+                           Hi <img src={image} style={{height:50,width:50}} alt=""/> {name}
                         </Link> &nbsp;
                         <button className="btn btn-danger" onClick={this.handleLogout}>
                             <span className="glyphicon glyphicon-log-out"></span> Logout
