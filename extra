@@ -33,16 +33,14 @@ Deployment
 -> Nginx
 -> Jenkins
 -> Docker
-/////////////////////////
-HOC
+HOC (https://www.codingame.com/playgrounds/8595/reactjs-higher-order-components-tutorial)
 React-GraphQL - 1 
-
-Basic React Native- 1
+Basic React Native- 1 (https://reactnative.dev/docs/image) 
+ReactMaps
+/////////////////////////
 React-Redux - 1
 React-Redux - 1
 React-PWA - 1
-
-ReactMaps
 Github
 Testing Jest Enzime
 ///////Walkthrough///////
@@ -461,3 +459,7 @@ a.splice(a.indexOf(34),1)
 /******UserInfo*****/
 (GET) => https://developerjwt.herokuapp.com/api/auth/userinfo
 (Header) => {'x-access-token':'token value from login'}
+
+
+/// react native
+> npx create-react-native-app appname
