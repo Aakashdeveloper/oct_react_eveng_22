@@ -460,6 +460,10 @@ a.splice(a.indexOf(34),1)
 (GET) => https://developerjwt.herokuapp.com/api/auth/userinfo
 (Header) => {'x-access-token':'token value from login'}
 
+https://developerjwt.onrender.com/api/auth/users
+https://zomatoapi.onrender.com
+https://paymentgatway.onrender.com
+
 
 /// react native
 > npx create-react-native-app appname
