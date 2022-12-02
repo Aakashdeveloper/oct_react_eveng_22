@@ -468,3 +468,12 @@ https://paymentgatway.onrender.com
 
 /// react native
 > npx create-react-native-app appname
+
+
+/////
+open cmd as admin
+> npm i -g json-server
+
+
+
+https://github.com/Aakashdeveloper/react-interview-questions

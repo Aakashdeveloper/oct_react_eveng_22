@@ -12,3 +12,9 @@ git push -u origin main
 git add .
 git commit -m "first commit"
 git push
+
+
+git branch
+
+
+git checkout -b branchname
